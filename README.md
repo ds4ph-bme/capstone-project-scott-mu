@@ -24,12 +24,18 @@ One weakness of the present model is that it does not take into account the comp
 
 ### References:
 Dancho (2018, Jan. 11). RStudio AI Blog: Deep Learning With Keras To Predict Customer Churn. Retrieved from https://blogs.rstudio.com/tensorflow/posts/2018-01-11-keras-customer-churn/
+
 Guillemot, Vincent (2019, July 2). MLR ROC curves with CI. Retrieved from https://rpubs.com/vguillem/465086
 
 ### Key Packages:
 Christopher J. Endres (2021). nhanesA: NHANES Data Retrieval. R package version 0.6.5.3. https://CRAN.R-project.org/package=nhanesA
+
 JJ Allaire and François Chollet (2021). keras: R Interface to 'Keras'. R package version 2.4.0. https://CRAN.R-project.org/package=keras
+
 Thomas Lin Pedersen and Michaël Benesty (2021). lime: Local Interpretable Model-Agnostic Explanations. R package version 0.5.2. https://CRAN.R-project.org/package=lime
+
 Xavier Robin, Natacha Turck, Alexandre Hainard, Natalia Tiberti, Frédérique Lisacek, Jean-Charles Sanchez and Markus Müller (2011). pROC: an open-source package for R and S+ to analyze and compare ROC curves. BMC Bioinformatics, 12, p. 77.  DOI: 10.1186/1471-2105-12-77 <http://www.biomedcentral.com/1471-2105/12/77/>
+
 Max Kuhn, Simon Jackson and Jorge Cimentada (2020). corrr: Correlations in R. R package version 0.4.3. https://CRAN.R-project.org/package=corrr
+
 Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686
