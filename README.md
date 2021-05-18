@@ -4,7 +4,7 @@ capstone-project-scott-mu created by GitHub Classroom
 
 
 
-##Diabetes Deep Learning Prediction Shiny App
+## Diabetes Deep Learning Prediction Shiny App
 
 
 
