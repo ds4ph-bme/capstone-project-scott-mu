@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/78364878/118744405-d4f3d000-b843-11eb-
 
 ### Introduction
 
-This app uses biometric and demographic data from a representative sample of the United States to predict the outcome of self-reported diabetes. It uses an artificial neural network deep learning model to capture non-linearities and avoid a priori assumptions about the relationships between the predictor variables. 
+This app predict the outcome of self-reported diabetes from biometric and demographic data of a representative sample of the United States. It uses an artificial neural network deep learning model to capture non-linearities and avoid a priori assumptions about the relationships between the predictor variables. 
 
 The Shiny app is hosted here: https://scott-mu.shinyapps.io/diabetes/
 
