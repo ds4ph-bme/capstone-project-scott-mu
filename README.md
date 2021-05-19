@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/78364878/118744405-d4f3d000-b843-11eb-
 
 ### Introduction
 
-This app uses publicly available biometric and demographic data from a representative sample of the United States to predict the outcome of self-reported diabetes. It uses an artificial neural network deep learning model to capture non-linearities and avoid a priori assumptions about the relationships between the predictor variables. 
+This app uses biometric and demographic data from a representative sample of the United States to predict the outcome of self-reported diabetes. It uses an artificial neural network deep learning model to capture non-linearities and avoid a priori assumptions about the relationships between the predictor variables. 
 
 The Shiny app is hosted here: https://scott-mu.shinyapps.io/diabetes/
 
@@ -14,7 +14,7 @@ The Shiny app is hosted here: https://scott-mu.shinyapps.io/diabetes/
 Diabetes mellitus is a common condition affecting millions of Americans. Diagnostic testing is widely available and consists of biochemically testing a blood sample. However, biometric features can be obtained noninvasively and may be correlated with the presence of diabetes. Some predictors, such as age or weight, could even be considered causal factors. The goal of this app is to test the validity of using only demographic and anthropometric predictors to ascertain the probability of diabetes. Though only 10 predictors were used for this project, this methodology is easily extended to include hundreds or thousands of predictors, and can be adapted to a wide variety of clinical outcomes.
 
 ### Data Source
-The data is from the 2017-2018 National Health and Nutrition Examination Survey (NHANES), which is a publicaly available dataset from the Center for Disease Control and Prevention (CDC). The `nhanesA` package was used to automate and simplify data retrieval.
+The data is from the 2017-2018 National Health and Nutrition Examination Survey (NHANES), which is a publicly available dataset from the Center for Disease Control and Prevention (CDC). The `nhanesA` package was used to automate and simplify data retrieval.
 
 ### Model Architecture
 First, the data is preprocessed by removing missing and ambiguous values. Only nonpregnant adults with complete biometric and self-reported diabetes data are included, leaving a sample size of 4,897 individuals. The length and weight measurements are left as continuous numeric predictors, but the categorical variables of sex and race/ethnicity are one-hot encoded. Next, all predictors were standardized. 80% of the data was used to build the model, and 20% of the data was left aside to test the model and construct a receiver operating characteristics (ROC) plot. Approximately 15% of the individuals in the dataset had an outcome of diabetes, so the diabetes class weight was adjusted to be 6 times that of the no diabetes class.
