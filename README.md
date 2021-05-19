@@ -1,5 +1,9 @@
 ## Diabetes Deep Learning Prediction Shiny App
 
+
+https://user-images.githubusercontent.com/78364878/118744405-d4f3d000-b843-11eb-9b05-53ed00e0886d.mp4
+
+
 ### Introduction
 
 This app uses publicly available biometric and demographic data from a representative sample of the United States to predict the outcome of self-reported diabetes. It uses an artificial neural network deep learning model to capture non-linearities and avoid a priori assumptions about the relationships between the predictor variables. 
@@ -13,14 +17,19 @@ Diabetes mellitus is a common condition affecting millions of Americans. Diagnos
 The data is from the 2017-2018 National Health and Nutrition Examination Survey (NHANES), which is a publically available dataset from the Center for Disease Control and Prevention (CDC). The `nhanesA` package was used to automate and simplify data retrieval.
 
 ### Model Architecture
-First, the data is preprocessed by removing missing and ambiguous values. Only nonpregant adults with complete biometric and self-reported diabetes data are included, leaving a sample size of 4,897 individuals. The length and weight measurements are left as continuous numeric predictors, but the categorical variables of sex and race/ethnicity are one-hot encoded. Next, all predictors were standaridized. 80% of the data was used to build the model, and 20% of the data was left aside to test the model and construct a receiver operating characteristics (ROC) plot. Approximately 15% of the individuals in the dataset had an outcome of diabetes, so the diabetes class weight was adjusted to be 6 times that of the no diabetes class.
+First, the data is preprocessed by removing missing and ambiguous values. Only nonpregant adults with complete biometric and self-reported diabetes data are included, leaving a sample size of 4,897 individuals. Th
+
+e length and weight measurements are left as continuous numeric predictors, but the categorical variables of sex and race/ethnicity are one-hot encoded. Next, all predictors were standaridized. 80% of the data was used to build the model, and 20% of the data was left aside to test the model and construct a receiver operating characteristics (ROC) plot. Approximately 15% of the individuals in the dataset had an outcome of diabetes, so the diabetes class weight was adjusted to be 6 times that of the no diabetes class.
 The model consists of an input layer, and 2 densely connected hidden layers with 16 nodes each. A 10% dropout layer is also included after each hidden layer to combat possible overfitting. The hidden layers used a rectified linear unit (ReLU) activation function, and the final output layer used a sigmoid function to classify individuals as having diabetes or not.  
 
 ### Model Interpretability
-Two plots are included to aid interpretability. The correlation plot displays the global correlation between the positive outcome and presence or magnitude each predictor. Additionally, for the user-input data, the `lime` package provides local interpretable model-agnostic explanations for which predictors contribute or contradict the proposed prediction.
+Two plots are included to aid interpretability. The correlation plot displays the global correlation between the positive outcome and presence or magnitude of each predictor. Additionally, for the user-input data, the `lime` package provides local interpretable model-agnostic explanations for which predictors contribute or contradict the proposed prediction.
 
 ### Limitations and Future Objectives
 One weakness of the present model is that it does not take into account the complex survey sampling strategy used in NHANES. Additionally, missingness was not appropriately accounted for. Ultimately, if the predictor variables simply do not numerically correlate with the outcome in a detectable manner, this type of prediction model will fail regardless of the volume of training data. A natural extension of this project is to predict a different clinical outcome using hundreds of predictor variables whose real-world relationships and causal associations are unclear.
+
+
+
 
 ### References:
 Dancho (2018, Jan. 11). RStudio AI Blog: Deep Learning With Keras To Predict Customer Churn. Retrieved from https://blogs.rstudio.com/tensorflow/posts/2018-01-11-keras-customer-churn/
