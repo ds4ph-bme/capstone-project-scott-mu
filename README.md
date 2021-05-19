@@ -24,7 +24,7 @@ The model consists of an input layer, and 2 densely connected hidden layers with
 Two plots are included to aid interpretability. The correlation plot displays the global correlation between the positive outcome and presence or magnitude of each predictor. Additionally, for the user-input data, the `lime` package provides local interpretable model-agnostic explanations for which predictors contribute or contradict the proposed prediction.
 
 ### Limitations and Future Objectives
-One weakness of the present model is that it does not take into account the complex survey sampling strategy used in NHANES. Additionally, missingness was not appropriately accounted for. Ultimately, if the predictor variables simply do not numerically correlate with the outcome in a detectable manner, this type of prediction model will fail regardless of the volume of training data. A natural extension of this project is to predict a different clinical outcome using hundreds of predictor variables whose real-world relationships and causal associations are unclear.
+One weakness of the present model is that it does not take into account the complex survey sampling strategy used in NHANES. Additionally, missingness was not appropriately accounted for. Ultimately, if the predictor variables simply do not numerically correlate with the outcome in a meaningful manner, this type of prediction model will fail regardless of the volume of training data. A natural extension of this project is to predict a different clinical outcome using hundreds of predictor variables whose real-world relationships and causal associations are unclear.
 
 
 
